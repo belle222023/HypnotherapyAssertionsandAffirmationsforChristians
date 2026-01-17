@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Books — Jerry Knoelke</title>
+  <link rel="stylesheet" href="/css/books.css" />
+</head>
+<body>
+<!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-content">
+      <h1 class="logo">Dr. Lauren J Ball</h1>
+
+      <!-- Hamburger button for mobile -->
+      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" >About</a>
+        <a href="books.html"class="active">Book</a>
+        <a href="review.htm">Review</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BOOK SHOWCASE -->
+  <section class="book-section">
+    <div class="container">
+      <h2 class="section-title">Book by Dr. Lauren J Ball</h2>
+
+      <div class="book-card">
+        <img src="/images/book-cover.png" alt="Math Is Not Magic book cover" />
+        <div class="book-info">
+          <h3>Hypnotherapy Assertions and Affirmations for Christians</h3>
+          <ul>
+            <li>✅ SPIRITUAL AWAKENING AND SELF-DISCOVERY</li>
+            <li>✅ ALIGNING FAITH WITH DAILY LIFE AND PURPOSE</li>
+          </ul>
+          <a href="https://www.amazon.com/Hypnotherapy-Assertions-Affirmations-Christians-Overcoming/dp/1955531463" class="btn" target="_blank" rel="noopener noreferrer">
+            Buy on Amazon
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Dr. Lauren J Ball — All Rights Reserved</p>
+    </div>
+  </footer>
+  <script>
+    // Mobile nav toggle
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    toggleBtn.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
