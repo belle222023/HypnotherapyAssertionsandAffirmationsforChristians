@@ -1,0 +1,311 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Merriweather", "Georgia", serif;
+    color: #1c2e2d;
+    background: #ffffff;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+  
+  /* ====== Header ====== */
+  .site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: #000000; /* solid black */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* subtle shadow for depth */
+    z-index: 999;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  /* Remove overlay pseudo-element entirely */
+  .site-header::after {
+    display: none;
+  }
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  .logo {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+  
+  .nav a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: #e4f2ec;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: #b6d226;
+    transition: 0.3s;
+  }
+  
+  .nav a:hover::after,
+  .nav a.active::after {
+    width: 100%;
+  }
+  
+  .nav a:hover,
+  .nav a.active {
+    color: #fbbc0e;
+    text-shadow: 0 0 6px #4ec292, 0 0 12px #028e8c;
+  }
+  /* Hamburger button */
+  .menu-toggle {
+    display: none; /* hide by default */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #e4f2ec;
+    cursor: pointer;
+  }
+  
+  /* Responsive for mobile */
+  @media (max-width: 768px) {
+    .nav {
+      display: none; /* hide nav links on mobile */
+      flex-direction: column;
+      background: #1c6f58;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      padding: 1rem 0;
+    }
+  
+    .nav a {
+      margin: 1rem;
+      text-align: center;
+    }
+  
+    .menu-toggle {
+      display: block; /* show hamburger button */
+    }
+  
+    .nav.show {
+      display: flex; /* show nav when toggled */
+    }
+  }
+  
+
+/* ====================== REVIEWS SECTION ====================== */
+.reviews-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f0f8ff, #e6f2ff);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* Container centers everything and limits width */
+  .reviews-section .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* ====================== SECTION TITLE ====================== */
+  .reviews-section h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #013149;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #008cff, #00bfa6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* ====================== REVIEWS GRID ====================== */
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    justify-items: center; /* Centers cards inside grid */
+    margin-bottom: 3rem;
+  }
+  
+  /* ====================== REVIEW CARD ====================== */
+  .review-card {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+    position: relative;     
+    max-width: 350px;
+    
+    display: flex;
+    flex-direction: column;
+    /* Remove justify-content: space-between */
+    justify-content: flex-start; /* aligns content to the top */
+  }
+  
+  /* Corner star accent */
+  .review-card::before {
+    content: "⭐";
+    font-size: 1.4rem;
+    color: #0aa1b8;
+    position: absolute;
+    top: -10px;
+    left: -6px;
+  }
+  
+  /* Hover effect */
+  .review-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 36px rgba(0,0,0,0.15);
+  }
+  
+  /* Author */
+  .review-author {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #014f66;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Text */
+  .review-text {
+    font-size: 1rem;
+    color: #2b3c44;
+    line-height: 1.65;
+    letter-spacing: 0.25px;
+    margin-bottom: 1rem;
+  }
+  
+  /* ====================== HIGHLIGHT REVIEWS ====================== */
+  .highlight-reviews {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 800px;
+    background: #ffffff;
+    border-left: 5px solid #0aa1b8;
+    padding: 2rem 2.2rem;
+    border-radius: 14px;
+    box-shadow: 0 14px 32px rgba(0,0,0,0.1);
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  /* Highlight title */
+  .highlight-reviews h3 {
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: #014f66;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Pin marker */
+  .highlight-reviews h3::before {
+    content: "📌 ";
+    font-size: 1.1rem;
+  }
+  
+  /* Highlight text */
+  .highlight-reviews p {
+    margin-bottom: 1rem;
+    color: #243338;
+    line-height: 1.65;
+    font-size: 1.02rem;
+    letter-spacing: 0.25px;
+  }
+  
+  .highlight-reviews p:last-child { margin-bottom: 0; }
+  
+  /* ====================== FADE ANIMATION ====================== */
+  @keyframes fadeIn {
+    from {opacity:0; transform: translateY(15px);}
+    to {opacity:1; transform: translateY(0);}
+  }
+  
+  /* ====================== RESPONSIVE ====================== */
+  @media(max-width:1024px){
+    .reviews-grid {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+  }
+  
+  @media(max-width:768px){
+    .highlight-reviews {
+      padding: 1.6rem 1.8rem;
+    }
+  
+    .reviews-section h2 {
+      font-size: 2.2rem;
+    }
+  
+    .review-card {
+      padding: 1.8rem 1.6rem;
+    }
+  }
+  /* ===== FOOTER ===== */
+footer {
+    background: #0b2f23;
+    color: #ccc;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+  }
+  footer p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .book-card {
+      flex-direction: column;
+      text-align: center;
+    }
+    .book-card img {
+      width: 80%;
+      max-width: 280px;
+    }
+  }
+  
+  
