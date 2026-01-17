@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dr. Lauren J Ball</title>
+  <link rel="stylesheet" href="/css/review.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-content">
+      <h1 class="logo">Dr. Lauren J Ball</h1>
+
+      <!-- Hamburger button for mobile -->
+      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html" >Home</a>
+        <a href="about.html">About</a>
+        <a href="books.html">Book</a>
+        <a href="review.htm"class="active">Review</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section class="reviews-section fade-up" id="reviews" aria-labelledby="reviews-heading">
+    <div class="container">
+      <h2 id="reviews-heading">Reviews</h2>
+      <div class="reviews-grid">
+
+        <div class="review-card">
+          <p class="review-author"><strong>Pacific Review</strong></p>
+          <p class="review-text">
+            ...praises the book as a groundbreaking bridge between psychology, healing, and Christian faith. It emphasizes that the core power of the text lies in its affirmations, which are meant to be spoken with prayer, repetition, and conviction. The review highlights that hypnotherapy is presented not as a replacement for belief, but as a divinely inspired tool through which God’s grace works to restore the mind and spirit.</p>
+          </p>
+        </div>
+
+        <div class="review-card">
+          <p class="review-author"><strong>Kirkus Review</strong></p>
+          <p class="review-text">
+            ...describes it as a faith-driven guide anchored in scripture and emotional clarity. It praises the book’s unapologetic reliance on God, Jesus Christ, and the Holy Ghost, calling it uplifting, comprehensive, and spiritually restorative.</p>
+        </div>
+        <div class="review-card">
+          <p class="review-author"><strong>Clarion Review</strong></p>
+          <p class="review-text">
+            ...highlights the work as a prayerful and disciplined manual that helps readers overcome emotional wounds, habits, and burdens through Christ-centered affirmations. The book offers a clear roadmap toward healing and spiritual transformation. </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p> © 2026 Dr. Lauren J Ball  — All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Flip card 3D animation
+    const flipInner = document.querySelector('#bookCover .flip-card-inner');
+    let angleY = 0;
+    let angleX = 0;
+    let direction = 1; // rocking direction
+
+    function spin3D() {
+      angleY += 0.6; // rotation speed Y-axis
+      if (angleY >= 360) angleY = 0;
+
+      // Rocking motion on X-axis: oscillates between -8deg and +8deg
+      angleX += 0.05 * direction;
+      if (angleX > 8 || angleX < -8) direction *= -1;
+
+      flipInner.style.transform = `rotateY(${angleY}deg) rotateX(${angleX}deg)`;
+      requestAnimationFrame(spin3D);
+    }
+
+    spin3D();
+
+    // Mobile nav toggle
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    toggleBtn.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>

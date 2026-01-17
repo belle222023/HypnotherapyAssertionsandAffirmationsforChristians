@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dr. Lauren J Ball</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-content">
+      <h1 class="logo">Dr. Lauren J Ball</h1>
+
+      <!-- Hamburger button for mobile -->
+      <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="books.html">Book</a>
+        <a href="review.htm">Review</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+  <section class="hero hero-video" id="top" aria-label="Hero section">
+    <video autoplay muted loop playsinline class="hero-bg" aria-hidden="true">
+      <source src="/images/libro.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner container fade-up">
+      <div class="hero-text">
+        <h2><span>Hypnotherapy Assertions and Affirmations for Christians</span></h2>
+        
+        <p class="kicker">“Sharing my spiritual journey, faith, and inspired writings.”</p>
+        <a href="#welcome" class="btn">Discover</a>
+      </div>
+
+      <!-- Book cover flip card -->
+      <div class="hero-image fade-up-delay" id="bookCover" role="button" tabindex="0" aria-pressed="false" aria-label="Toggle book cover flip">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="/images/book-cover.png" alt="Math Is Not Magic book cover" />
+          </div>
+          <div class="flip-card-back">
+            <img src="/images/book-backcover.png" alt="Book back cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- BOOK SECTION -->
+  <section class="book-fullwidth fade-up" id="book" aria-labelledby="book-heading">
+    <div class="book-wrapper container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 3rem;">
+
+      <!-- LEFT SIDE: Book Information -->
+      <div class="book-info" style="flex: 1 1 520px;">
+        <h2 id="book-heading"><em>Hypnotherapy Assertions and Affirmations for Christians</em></h2>
+        <p>
+          <strong> I served nearly 25 years in the United States Army through WWII, Korea, and Vietnam. 
+            Afterwards, I practiced chiropractic medicine for 37 years before fully dedicating my 
+            time to studying scripture and writing spiritually inspired books. My mission is to help 
+            others prepare spiritually and grow closer to God through principles of faith, self-reflection.
+        </p>
+        <p>
+          My mission is to help 
+            others prepare spiritually and grow closer to God through principles of faith, self-reflection
+        </p>
+        <blockquote>
+          “Sharing my spiritual journey, faith, and inspired writings.”
+        </blockquote>
+
+      <!-- RIGHT SIDE: Book Covers -->
+      <div class="book-images" style="flex: 1 1 380px; display: flex; gap: 1.5rem; justify-content: center;">
+        <img src="/images/book-cover.png" alt="Book front cover" style="width: 190px; border-radius: 8px; box-shadow: 0 12px 24px rgba(0,0,0,0.1);" />
+        <img src="/images/book-backcover.png" alt="Book back cover" style="width: 190px; border-radius: 8px; box-shadow: 0 12px 24px rgba(0,0,0,0.1);" />
+      </div>
+
+    </div>
+  </section>
+
+  <section class="video-section">
+    <div class="video-container">
+      <video controls preload="metadata" poster="thumbnail.jpg">
+        <source src="/images/Preview- Hypnotherapy Assertions and Affirmations for Christians.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <div class="video-overlay">
+        <span>PREVIEW</span>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- PRESS SECTION -->
+  <section class="press-section fade-up" id="press" aria-labelledby="press-heading">
+    <div class="press-container container">
+      <h2 id="press-heading">World of Inspiration</h2>
+      <div class="press-grid">
+        <img src="/images/Dr. Lauren Ball.jpg" alt="PRESS diagram" class="press-img" />
+        <div class="press-text">
+          <h3>Inspiration for Writing the Book</h3>
+         
+          <p>Hypnotherapy is a form of searching and affirmation for Christians. I looked inward and at the world and realized how unprepared I truly was—and how unprepared the world was to be caught up in the clouds of heaven to descend with Jesus Christ and His followers to serve Him during His Millennial Reign on Earth.</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <div class="highlight-reviews">
+    <h3>About</h3>
+
+    <p><strong>What inspired you to write your latest book and what made it unique?</strong>
+      I believe that all of us, including myself, have a need to become closer to Deity, and that we need a good Christian book to help us do just that. The uniqueness of this book is that it provides methods to build our spirituality beyond prayer and supplication to our Heavenly Father.
+
+    <p><strong>What themes or messages do you often explore in your work?</strong> 
+      That I have created a self-help book which will not only bring readers closer to Deity, but will also help them understand the reasons for the creation of this world and our responsibility to our Creator.
+
+    <p><strong>What inspired you to become a writer?</strong> 
+      I examined my spiritual condition and decided to see if I could make a positive difference in my life and in the lives of others as well—all with help from above. I believe the Second Coming is just around the corner, and I am not prepared. Perhaps the world isn’t either—and perhaps I could help in our preparation.
+    </div>
+
+</div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p> © 2026 Dr. Lauren J Ball  — All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    // Flip card 3D animation
+    const flipInner = document.querySelector('#bookCover .flip-card-inner');
+    let angleY = 0;
+    let angleX = 0;
+    let direction = 1; // rocking direction
+
+    function spin3D() {
+      angleY += 0.6; // rotation speed Y-axis
+      if (angleY >= 360) angleY = 0;
+
+      // Rocking motion on X-axis: oscillates between -8deg and +8deg
+      angleX += 0.05 * direction;
+      if (angleX > 8 || angleX < -8) direction *= -1;
+
+      flipInner.style.transform = `rotateY(${angleY}deg) rotateX(${angleX}deg)`;
+      requestAnimationFrame(spin3D);
+    }
+
+    spin3D();
+
+    // Mobile nav toggle
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+
+    toggleBtn.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
